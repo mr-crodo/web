@@ -1,0 +1,50 @@
+*,* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dedede;
+}
+
+.menu nav ul {
+  display: flex;
+}
+
+.menu nav ul li {
+  margin-left: 10px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 18px;
+}
+
+.menu nav ul li a {
+text-decoration: none;
+}
+
+.main-teck {
+  /* display: block; */
+}
+
+.left {
+  max-width: 400px;
+  float: right;
+}
+
+
+.right {
+  /* display: flex; */
+  /* max-width: 400px; */
+  /* height: 400px; */
+  
+  max-width:50%;
+  /* margin: auto; */
+  /* border: 1px solid red; */
+}
