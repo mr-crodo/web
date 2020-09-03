@@ -1,0 +1,45 @@
+// compress: false
+@import "var";
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.title {
+  background: #1d365f;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h1 {
+  color: @color1;
+}
+
+.prim {
+  max-width: 500px;
+  max-height: 500px;
+  background-color: @neon;
+}
+
+
+.component {
+  width: 300px;
+  color: @secondary;
+
+  @media (min-width: 768px) {
+    width: 600px;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(/img/retina2x.png);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 800px;
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.title {
+  background: #1d365f;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+}
+h1 {
+  color: #f0f0ff;
+}
+.prim {
+  max-width: 500px;
+  max-height: 500px;
+  background-color: #aa5ac2;
+}
+.component {
+  width: 300px;
+  color: #f2b834;
+}
+@media (min-width: 768px) {
+  .component {
+    width: 600px;
+  }
+}
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .component {
+    background-image: url(/img/retina2x.png);
+  }
+}
+@media (min-width: 1280px) {
+  .component {
+    width: 800px;
+  }
+}
