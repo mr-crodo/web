@@ -1,3 +1,11 @@
-jus {
-  justify-content: space-between;
+.header-icon {
+  /* fill: #e19d22;
+  border-bottom: 1px solid #e19d22; */
+  /* padding-bottom: 10px; */
 }
+
+/* .navbar-brand {
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+} */
