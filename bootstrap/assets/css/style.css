@@ -1,11 +1,5 @@
-.header-icon {
-  /* fill: #e19d22;
-  border-bottom: 1px solid #e19d22; */
-  /* padding-bottom: 10px; */
+.left-description {
+  -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }
-
-/* .navbar-brand {
-  display: flex;
-  text-align: center;
-  justify-content: flex-end;
-} */
