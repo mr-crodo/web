@@ -20,6 +20,16 @@
  width: 150px;
 }
 
+/* .form-group  {
+  width: 128px;
+  border: 1px solid red;
+} */
+
+.form__where {
+  padding: 40px 50px;
+  text-align: left;
+}
+
 @media (max-width: 850px) {
   .form-group {
    flex-basis: 100%;
