@@ -1,27 +1,19 @@
 // Comment
-"use strict";
-var setMir = "Hello Nasib";
-console.log("setMir", setMir);
+// "use strict";
 
-function nameT () {
-  let nasIb = "Hi baby";
-  console.log("nameT -> nasIb", nasIb);
+
+let answer = [],
+  questions = [
+    'What is you name?',
+    'What is you sure name?',
+    'What is you old?',
+    'Where are you frome?'
+  ];
+
+
+for (let i = 0; i < questions.length; i++) {
+  answer[i] = prompt(questions[i], '');
 }
 
-// name();
-
-function lastname () {
-  const nasIb = "Hello World";
-  console.log("lastname -> nasIb", nasIb);
-  var setMir = "AUS";
-  console.log("lastname -> setMir", setMir);
-}
-
-
-
-nameT();
-lastname();
-
-// console.log(nameT() + lastname());
-
-console.log("eto proverka", setMir);
+document.write(answer);
+console.log("answer", answer);
