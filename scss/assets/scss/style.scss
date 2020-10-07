@@ -1,0 +1,39 @@
+$fz:100px;
+
+
+.block {
+  padding: 30px;
+  font-size: 50px;
+  line-height: 60px;
+  background-color: rgb(255, 217, 0);
+
+
+  >p {
+    color: red;
+  }
+
+ .block__text {
+   font-size: $fz;
+   span {
+    color: green;
+  }
+ }
+
+ &.block--big {
+   font-size: $fz;
+ }
+
+}
+
+.link {
+  color: rgb(225, 0, 255);
+  font-size: 20px;
+  .block & {
+    font-size: $fz;
+    color: azure;
+  }
+
+  &:hover {
+    color: green;
+  }
+}

@@ -1,0 +1,30 @@
+.block {
+  padding: 30px;
+  font-size: 50px;
+  line-height: 60px;
+  background-color: #ffd900;
+}
+.block > p {
+  color: red;
+}
+.block .block__text {
+  font-size: 100px;
+}
+.block .block__text span {
+  color: green;
+}
+.block.block--big {
+  font-size: 100px;
+}
+
+.link {
+  color: #e100ff;
+  font-size: 20px;
+}
+.block .link {
+  font-size: 100px;
+  color: azure;
+}
+.link:hover {
+  color: green;
+}
