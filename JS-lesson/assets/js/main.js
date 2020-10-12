@@ -20,10 +20,10 @@
 
 
 
-// "use strict";
+"use strict";
 
 
-// let age = prompt("Сколько вам лет?", "");
+let age = prompt("Сколько вам лет?", "");
 
 // if (age < 18) {
 //   alert('Ranovato esho!!');
@@ -58,54 +58,54 @@
 // console.log(calc(2, 3));
 
 
-// function myFirstApp(name, age) {
-//   alert(`Привет, меня зовут ${name} и это моя первая программа!`);
+function myFirstApp(name, age) {
+  alert(`Привет, меня зовут ${name} и это моя первая программа!`);
 
-//   function showSkills() {
-//     let skills = [],
-//     questions = [
-//           ' Я владею ',
-//           ' Я владею ',
-//           ' Я владею ',
-//           ' Я владею '
-//         ];
+  function showSkills() {
+    let skills = [],
+    questions = [
+          ' Я владею ',
+          ' Я владею ',
+          ' Я владею ',
+          ' Я владею '
+        ];
 
-//     for (let i = 0; i < questions.length; i++) {
-//       skills[i] = prompt(questions[i], '');
-//       document.write(' Я владею ' + ' ' + skills[i]);
-
-
-//     }
-//   }
-
-//   showSkills();
-
-//   function chechAge() {
-//     if(age >= 18 && age < 25) {
-//       alert('У тебя отличные шансы стать фронтенд разработчиком');
-//     } else if( age >=25) {
-//       alert('Еще не все потерянно бейся до конца!!!!');
-//     } else {
-//       alert('У тебя уровень Марка Цукербера');
-//     }
-//   }
-
-//   chechAge();
-
-//    function calcPow(num) {
-//     num = prompt('введите знасения num ', '');
-//     // num**
-//    document.write(' ' + num * num);
-//    }
-
-//    calcPow();
+    for (let i = 0; i < questions.length; i++) {
+      skills[i] = prompt(questions[i], '');
+      document.write(' Я владею ' + ' ' + skills[i]);
 
 
-// }
+    }
+  }
 
-// name = prompt(' Введите имя ');
-// age = prompt('Введите возраст');
-// myFirstApp(name, age);
+  showSkills();
+
+  function chechAge() {
+    if(age >= 18 && age < 25) {
+      alert('У тебя отличные шансы стать фронтенд разработчиком');
+    } else if( age >=25) {
+      alert('Еще не все потерянно бейся до конца!!!!');
+    } else {
+      alert('У тебя уровень Марка Цукербера');
+    }
+  }
+
+  chechAge();
+
+   function calcPow(num) {
+    num = prompt('введите знасения num ', '');
+    // num**
+   document.write(' ' + num * num);
+   }
+
+   calcPow();
+
+
+}
+
+name = prompt(' Введите имя ');
+age = prompt('Введите возраст');
+myFirstApp(name, age);
 
 
 
@@ -182,40 +182,40 @@
 //   myFirstApp('Nick', 33);
 
 
-function myFirstApp(name, age) {
-  name = prompt('Como tu chamas?');
-  age = prompt('Que idade tens?');
+// function myFirstApp(name, age) {
+//   name = prompt('Como tu chamas?');
+//   age = prompt('Que idade tens?');
 
-  console.log(`Olá, meu nome é ${name} Isto é a minha promeira App`);
+//   console.log(`Olá, meu nome é ${name} Isto é a minha promeira App`);
 
-  function showSkills() {
-      let skills = ['html', 'css', 'sass', 'js'];
+//   function showSkills() {
+//       let skills = ['html', 'css', 'sass', 'js'];
 
-      console.log('Os meus skills são:');
+//       console.log('Os meus skills são:');
 
-      for (let i = 0; i < skills.length; i++) {
-          console.log(`${i+1} - ${skills[i]}`);
-      }
-  }
-  showSkills()
+//       for (let i = 0; i < skills.length; i++) {
+//           console.log(`${i+1} - ${skills[i]}`);
+//       }
+//   }
+//   showSkills()
 
-  function checkAge() {
-      if (age > 18) {
-          console.log('Es maior do 18! Otimo')
-      } else {
-          console.log('Desculpe, ainda tens que crescer...')
-      }
-  }
-  checkAge();
+//   function checkAge() {
+//       if (age > 18) {
+//           console.log('Es maior do 18! Otimo')
+//       } else {
+//           console.log('Desculpe, ainda tens que crescer...')
+//       }
+//   }
+//   checkAge();
 
-  function calcPow(num) {
-      num = prompt('Mete um numero!'),
-      calcNum = num * 3;
+//   function calcPow(num) {
+//       num = prompt('Mete um numero!'),
+//       calcNum = num * 3;
 
-      console.log(`Meteste ${num}, e o resultado é ${calcNum}.`)
-  }
+//       console.log(`Meteste ${num}, e o resultado é ${calcNum}.`)
+//   }
 
-  calcPow();
-}
+//   calcPow();
+// }
 
-myFirstApp();
+// myFirstApp();
