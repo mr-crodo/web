@@ -32,4 +32,20 @@ var manLive = function manLive(male, maleName){
    
 };
 
-console.log(manLive('Turkey' , 'Abdul'));
+console.log(manLive('Azerbayjani' , 'Nasib'));
+
+
+var React = require("react");
+
+var Factorial = React.createClass({
+    render: function(){
+        var result = this.props.result || 1,
+            n = this.props.n;
+        if(!n){
+	    return <span>{result}</span>
+	}else{
+	    return <Factorial n={n - 1} result={result*n}/>
+	}
+    }
+});
+module.exports = Factorial;
