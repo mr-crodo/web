@@ -18,3 +18,5 @@ let
   console.log(rainbowColors);
   let emptyArray = [];
   let eptyArrayNew = new Array();
+
+  document.body.style.backgroundColor = prompt('background color?', 'green');
