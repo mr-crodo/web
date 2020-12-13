@@ -1,0 +1,16 @@
+body {
+  background: rgb(160, 221, 160);
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  /* dla toqo ctobu ubrat nenujnie otstupi */
+  border-collapse: collapse;
+  width: 100%;
+  background: #dedede;
+}
