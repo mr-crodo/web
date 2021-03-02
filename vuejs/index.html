@@ -7,7 +7,6 @@
   <title>Document</title>
   <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
   <!-- версия для разработки, отображает полезные предупреждения в консоли -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <style>
     /* @import "assets/css/main.css"; */
   </style>
@@ -16,21 +15,38 @@
 
 <body>
 
-  <div id="app" title="Zaqolovok" style="cursor: pointer;">
-    {{ message }}
-  </div>
+<!--  <div id="app" :title="message" style="cursor: pointer;">-->
+<!--    {{ name }}-->
+<!--    <h1 v-if='status == 1' :title='message'>Свойство ravno 1</h1>-->
+<!--    <h1 v-else-if='status == 2' :title='message'>Свойство ravno 2</h1>-->
+<!--    <h1 v-else :title='message'>Свойство ravno {{ status }}</h1>-->
+<!--  </div>-->
 
+<div id="app">
+  <input type="text" v-on:input="changeName">
+  <h1>Hello {{name}}</h1>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello Vue!'
+        message: 'Ey Nasib Sliw kak dela!',
+        name: 'Nasib',
+        status: 3
+      },
+      methods: {
+        changeName: function (event) {
+          this.name = event.target.value
+        }
       }
     })
   </script>
 
   <!-- <picture> -->
-    <!-- <source media="(min-width:1200px)" srcset="/assets/img/image-1200.jpg"> -->
+    <!-- <source media="(min-width:1{ status }00px)" srcset="/assets/img/image-1200.jpg"> -->
     <!-- <source media="(min-width:900px)" srcset="/assets/img/image-900.jpg">
     <source media="(min-width:760px)" srcset="/assets/img/image-760.jpg">
     <source media="(min-width:540px)" srcset="/assets/img/image-540.jpg">
@@ -53,7 +69,7 @@
 
   </div> -->
 
-  <input type="text" value="nasib-boxer" class="aue-jiszn-voram" id="vse-norm-eto-Id">
+<!--  <input type="text" value="nasib-boxer" class="aue-jiszn-voram" id="vse-norm-eto-Id">-->
 
 
   <script src="/assets/js-kids/uppercase.js"></script>
