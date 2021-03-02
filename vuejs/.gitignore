@@ -1,0 +1,7 @@
+/node_modules/
+/build/
+/debug.log
+.idea/
+/.idea/
+/.vscode/
+/assets/

@@ -23,8 +23,11 @@
 <!--  </div>-->
 
 <div id="app">
-  <input type="text" v-on:input="changeName">
-  <h1>Hello {{name}}</h1>
+ <h1>String: {{ name }}</h1>
+  <h1>Sum: {{ number + 60 }}</h1>
+  <h1>Method: {{ sayHello() }}</h1>
+  <h1>Bulean function: {{isOk ? 'I am Ok' : 'I am not OK!!'}}</h1>
+  <h1>Function: {{aue.split('').reverse().join('')}}</h1>
 </div>
 
 
@@ -35,12 +38,15 @@
       data: {
         message: 'Ey Nasib Sliw kak dela!',
         name: 'Nasib',
-        status: 3
+        status: 3,
+        number: 100,
+        isOk: false,
+        aue: "AUE Jizn Voram"
       },
       methods: {
-        changeName: function (event) {
-          this.name = event.target.value
-        }
+        sayHello: function() {
+          return 'I am  VueJS Programmer'
+    }
       }
     })
   </script>
