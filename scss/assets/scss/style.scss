@@ -1,33 +1,49 @@
-$fz:100px;
+@import "null-style.scss";
 
+$fz:100px;
+$color_1:#000;
+$color_2:#ddd;
+$color_3:#fff;
+
+// Shablon
+%tplborder {
+  border-bottom: 5px dashed red;
+}
+
+@mixin fontz($f) {
+  font-size: $f;
+}
 
 .block {
+  width: 300px / 960px * 100%;
+  background-color: #666;
   padding: 30px;
   font-size: 50px;
   line-height: 60px;
-  background-color: rgb(255, 217, 0);
 
 
   >p {
     color: red;
   }
 
- .block__text {
-   font-size: $fz;
-   span {
-    color: green;
-  }
- }
+  .block__text {
+    font-size: $fz;
 
- &.block--big {
-   font-size: $fz;
- }
+    span {
+      color: green;
+    }
+  }
+
+  &.block--big {
+    font-size: $fz;
+  }
 
 }
 
 .link {
   color: rgb(225, 0, 255);
   font-size: 20px;
+
   .block & {
     font-size: $fz;
     color: azure;
@@ -35,5 +51,57 @@ $fz:100px;
 
   &:hover {
     color: green;
+  }
+
+  @extend %tplborder;
+}
+
+.link-2 {
+  @include fontz(100px);
+  @extend %tplborder;
+}
+
+.main {
+  height: 100vh;
+  background-color: #d2d1d1;
+}
+
+
+.card__wrapper {
+  background-color: #fff;
+  display: flex;
+  // position: relative;
+  // flex-direction: column;
+  width: 271px;
+  overflow: hidden;
+  font-family: 'Plumb';
+  font-style: normal;
+  border: 1px solid red;
+  height: 350px;
+
+  // &:hover {
+  //   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  //   transition: 0.1s;
+  // }
+}
+
+.card {
+  display: flex;
+  padding: 13px 20px 12px 20px;
+  border-radius: 3px;
+  font-style: normal;
+  // width: 100%;
+  height: 200px;
+
+  text-decoration: none;
+  flex-direction: column;
+  background-color: #fff;
+  border: 5px solid #0cf00c;
+  // outline: none;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 1);
+    transition: 0.1s;
   }
 }
