@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# CodeStream ignored files
+/../../JS-lesson\.idea/codestream.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\SYDAAAAAAAAAAAAAAA\GIT\Git-Hub\mr-crodo\web\JS-lesson\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
