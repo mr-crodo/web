@@ -11,53 +11,24 @@
 "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 
 4) Потренироваться и переписать цикл еще двумя способами*/
-
-// 'use strict';
-
-// Код возьмите из предыдущего домашнего задания
-const numberOfFilms = +prompt('Skolko filmov vi uje posmotreli?', '');
-
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false
-};
-
-
+'use strict'; // Код возьмите из предыдущего домашнего задания
+// const numberOfFilms = +promt
 // const
 //   a = prompt("Posledniy prosmotrenniy film?", ''),
 //   b = prompt('Na skolko ocenite eqo?', ''),
 //   c = prompt('Odin iz prosmotrennix filmov?', ''),
 //   d = prompt('Na skolko ocenite eqo?', '');
-
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
+// for (let i = 0; i < 2; i++) {
+//   const
+//     a = prompt("Posledniy prosmotrenniy film?", ''),
+//     b = prompt('Na skolko ocenite eqo?', '');
+// }
 
-for (let i = 0; i < 2; i++) {
-  const
-    a = prompt("Posledniy prosmotrenniy film?", ''),
-    b = prompt('Na skolko ocenite eqo?', '');
+var num = 50;
 
-  if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-    personalMovieDB.movies[a] = b;
-    console.log('done');
-  } else {
-    console.log('ERROR');
-    i--;
-  }
-
+while (num <= 55) {
+  console.log(num);
+  num++;
 }
-
-if (personalMovieDB.count < 10) {
-  console.log('Просмотрено довольно мало фильмов');
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-console.log('Вы классический зритель');
-} else if (personalMovieDB.count >= 30) {
-  console.log('Вы киноман');
-} else {
-  console.log('Произошла ошибка');
-}
-
-console.log(personalMovieDB);
