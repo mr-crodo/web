@@ -40,14 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   addForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const newFilm = addInput.value;
+    let newFilm = addInput.value;
     const favorite = checkbox.checked;
 
-    movieDB.movies.push(newFilm); //sdes mi plucennir dannie ot user dobavlaem v DB kak v massive cerez push
-    sortArr(movieDB.movies); // sdes mi s pomoshyu "sort" sortiruem dannie po alfavitu
-    creatMovieList(movieDB.movies, movieList);
+    if (newFilm) {
 
-    addForm.reset
+      if (newFilm.length > 21) {
+        newFilm = `${newFilm.substring(0, 22)}...`;
+      }
+
+      if (favorite) {
+        console.log("Добавляем любимый фильм");
+      }
+
+
+
+      movieDB.movies.push(newFilm); //sdes mi plucennir dannie ot user dobavlaem v DB kak v massive cerez push
+      sortArr(movieDB.movies); // sdes mi s pomoshyu "sort" sortiruem dannie po alfavitu
+      creatMovieList(movieDB.movies, movieList);
+    }
+
+
+
+    e.target.reset();
 
 
   });
@@ -72,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function creatMovieList(films, parent) {
     parent.innerHTML = "";
+    sortArr(films); // sortiruem pram sdes
     films.forEach((film, i) => {
       parent.innerHTML += `
         <li class="promo__interactive-item">${i + 1} ${film}
@@ -79,11 +95,22 @@ document.addEventListener('DOMContentLoaded', () => {
         </li>
       `;
     });
+
+
+    document.querySelectorAll('.delete').forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.remove();
+        movieDB.movies.splice(i, 1);
+
+        creatMovieList(films, parent);
+      });
+    });
   }
+
+
 
   deleteAdv(adv);
   makeChanges();
-  sortArr(movieDB.movies);
   creatMovieList(movieDB.movies, movieList);
 
 });
