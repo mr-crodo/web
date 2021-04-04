@@ -53,8 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Добавляем любимый фильм");
       }
 
-
-
       movieDB.movies.push(newFilm); //sdes mi plucennir dannie ot user dobavlaem v DB kak v massive cerez push
       sortArr(movieDB.movies); // sdes mi s pomoshyu "sort" sortiruem dannie po alfavitu
       creatMovieList(movieDB.movies, movieList);
