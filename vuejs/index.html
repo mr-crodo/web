@@ -10,27 +10,28 @@
 
   <div class="container" id="app">
     <div class="card">
-      <h1>{{ appTitle }}</h1>
+      <h1 :style="{
+      color: inputValue.length < 5 ? 'darkred' : 'darkblue',
+      fontSize: inputValue.length < 6 ? '2rem' : '1.5em'
+      }">{{ appTitle }}</h1>
       <div class="form-control">
         <input
                 type="text"
                 :placeholder="myPlaceholder"
-                :value="inputValue"
-                @input="inputChangeHandler"
+                v-model="inputValue"
                 @keypress.enter="addVueNote"
         >
       </div>
-      <button class="btn" v-on:click="addVueNote">Добавить</button>
+      <button class="btn" @click="addVueNote">Добавить</button>
       <hr>
-
       <ul class="list" v-if="notes.length !== 0">
         <li class="list-item" v-for="(myNote, idx) of notes">
            ({{ idx + 1 }})  {{ toUpperCase(myNote) }}
-          <button class="btn danger" @click="removeNote(idx, $event)">Удалить</button>
+          <button class="btn danger" @click="removeNote(idx)">Удалить</button>
         </li>
         <hr>
         <li>
-          <strong>Общее количество заметок: {{ notes.length }}</strong>
+          <strong>Общее количество заметок: {{ notes.length }}</strong> | Удвоенно: {{ notes.length * 2 }}
         </li>
       </ul>
 
