@@ -5,8 +5,3 @@ function showThis() {
 }
 
 showThis();
-function showThis() {
-  console.log(this);
-}
-
-showThis();
