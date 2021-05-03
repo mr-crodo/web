@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <h2>
+      <!--! vmesto v-bind prosto : -->
+      <a :href="url">Google</a>
+    </h2>
+
+   <h2>
+     Counter: {{counter}}
+   </h2>
+
+   <!--! Vmesto v-on prosto @ bez dvoetoceqo-->
+   <button @click="counter++">Rise</button>
+
+  </div>
+  
+  <script src="/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        url: 'https://google.com',
+        counter: 0
+
+      },
+      methods: {
+      }
+    });
+  </script>
+</body>
+</html>

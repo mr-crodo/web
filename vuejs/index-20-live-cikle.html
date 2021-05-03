@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app2" class="app2">
+
+    <h2>{{ title }}</h2>
+    <button @click="title = 'Changed title'">Change</button>
+
+    <button @click="doDestroy">Destroy</button>
+
+  </div>
+
+
+
+
+  <!-- <script src="/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <script>
+    var vue = new Vue({
+
+      data: {
+        title: 'Hello Qadan alim nagaurirsan'
+      },
+      beforeCreate: function() {
+        console.log('Before Create')
+      },
+      created: function() {
+        console.log('Created')
+      },
+      beforeMount: function() {
+        console.log("Before Mount")
+      },
+      mounted: function() {
+        console.log('Mounted')
+      },
+      beforeUpdate: function() {
+        console.log('Before Updated')
+      },
+      updated: function() {
+        console.log("Updated")
+      },
+      beforeDestroy: function() {
+        console.log('Before destroy')
+      },
+      destroyed: function() {
+        console.log('Destroid')
+      },
+      template: ``,
+      methods: {
+        doDestroy: function(){
+          this.$destroy()
+        }
+      },
+      computed: {
+
+      },
+      watch: {
+
+      }
+    });
+
+    vue.$mount('.app2')
+  </script>
+</body>
+
+</html>

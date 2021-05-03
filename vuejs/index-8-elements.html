@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- <h2 v-if="type === 'a'">A</h2>
+    <h2 v-else-if="type === 'b'">B</h2>
+    <h2 v-else-if="type === 'c'">C</h2>
+    <h2 v-else>not match</h2> -->
+
+    <template v-if="isVisible">
+      <h2>I am title</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quisquam?</p>
+    </template>
+    
+
+<template v-else>
+  <h2 style="color: red">I am title</h2>
+  <p style="color: blue">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quisquam?</p>
+</template>
+    
+
+    
+
+  </div>
+  
+  <script src="/vue.js"></script>
+
+  <script>
+
+    new Vue({
+      el: '#app',
+      data: {
+        isVisible: false
+      }
+    })
+    
+  </script>
+</body>
+</html>

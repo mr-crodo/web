@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <h2>{{ title }}</h2>
+    <h1>{{newField}}</h1>
+    <button @click="title = 'Update title'">Update title</button>
+
+  </div>
+
+  <hr>
+
+  <div id="app2" class="app2">
+    <h2>{{title}}</h2>
+    <button @click="updateFirstTitle">Update first title</button>
+  </div>
+
+
+  <!-- <script src="/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <script>
+    var vue1 = new Vue({
+      el: '#app',
+      data: {
+      title: 'Hello I am Vue'
+
+      },
+      methods: {
+        alertFast: function() {
+          alert('Ti stanew milyarderom i sdelaew proriv v svere robototexniki')
+        }
+      },
+      computed: {
+      
+      },
+      watch: {
+       
+      }
+    })
+
+    console.log(vue1);
+
+    vue1.newField = 'Randomized text'
+
+    new Vue({
+      el: '.app2',
+      data: {
+        title: 'Aaa bla tez oyrende Vue Jsi'
+      },
+      methods: {
+      updateFirstTitle: function(){
+        vue1.title = 'Updated from second app'
+        vue1.newField = "Obnovleyshin"
+
+        setTimeout(function() {
+          vue1.alertFast()
+        }, 4000)
+      }
+      },
+      computed: {
+
+      },
+      watch: {
+
+      }
+    })
+  </script>
+</body>
+
+</html>
