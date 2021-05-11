@@ -1,11 +1,16 @@
 <template>
-$END$
+  <div>
+    <h1>List</h1>
+
+  </div>
+
 </template>
 
 <script>
-export default {
-name: "List"
-}
+import LisMixin from './listMixin'
+  export default {
+  mixins: [LisMixin]
+  }
 </script>
 
 <style scoped>
