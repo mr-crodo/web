@@ -1,10 +1,10 @@
 <template>
-    <h1>Home page</h1>
+$END$
 </template>
 
 <script>
 export default {
-  name: "Home"
+name: "SecondCounter"
 }
 </script>
 
