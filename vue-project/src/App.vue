@@ -1,36 +1,38 @@
 <template>
-
-  <div class="container">
-    <ul class="nav nav-pills">
-
-      <li class="nav-item">
-        <router-link class="nav-link" exact :to="'/'" active-class="active">Home</router-link>
-      </li>
-
-      <li class="nav-item">
-        <router-link class="nav-link" :to="'/cars'" active-class="active">Cars</router-link>
-
-      </li>
-
-      <li class="nav-item">
-        <router-link class="nav-link" :to="'/car/3'" active-class="active">Cars 3</router-link>
-
-      </li>
-
-      <li class="nav-item">
-        <router-link class="nav-link" :to="'/car/4'" active-class="active">Cars 4</router-link>
-
-      </li>
-
-
-    </ul>
-    <router-view></router-view>
+  <div class="container text-center pt-5">
+    <h1>{{ title }}</h1>
+    <hr>
+    <app-counter></app-counter>
+    <app-second-counter></app-second-counter>
+    <hr>
+    <app-actions></app-actions>
   </div>
-
 </template>
 
-<script>
-  export default {
+<style>
 
+</style>
+
+<script>
+import Counter from "./Counter";
+import Actions from "./Actions";
+import SecondCounter from "./SecondCounter";
+
+export default {
+  data() {
+    return {
+      counter: 0
+    }
+  },
+  components: {
+    appCounter: Counter,
+    appActions: Actions,
+    appSecondCounter: SecondCounter
+  },
+  computed: {
+    title () {
+      return this.$store.getters.title
+    }
   }
+}
 </script>

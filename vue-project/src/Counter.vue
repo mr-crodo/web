@@ -1,21 +1,18 @@
 <template>
-  <div>
-    <h2>Counter</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, numquam.</p>
-  </div>
+  <h2>Counter: {{ counter }}</h2>
 </template>
 
 <script>
-
-  export default {
-
+export default {
+  name: "Counter",
+  computed: {
+    counter () {
+      return this.$store.getters.computedCounter
+    }
   }
-
+}
 </script>
 
 <style scoped>
-  h2 {
-    color: red;
-  }
 
 </style>
