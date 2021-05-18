@@ -46,7 +46,6 @@
                 dark
                 @click="onSubmit"
                 :disabled="!valid"
-                btn-lg
             >
               Login
             </v-btn>

@@ -5,7 +5,7 @@
       <v-card
           class="mx-auto overflow-hidden"
           width="100%"
-          height="100vh"
+
       >
         <v-system-bar color="blue-grey lighten-5"></v-system-bar>
 
@@ -20,7 +20,9 @@
           >
           </v-app-bar-nav-icon>
 
-          <v-toolbar-title>Ad application</v-toolbar-title>
+          <v-toolbar-title>
+            <router-link to="/" tag="span" class="pointer">Ad application</router-link>
+          </v-toolbar-title>
 
           <v-spacer></v-spacer>
 
@@ -71,9 +73,11 @@
             </v-navigation-drawer>
 
 
-        <v-content>
-          <router-view></router-view>
-        </v-content>
+        <v-container height="100">
+          <v-content>
+            <router-view></router-view>
+          </v-content>
+        </v-container>
 
       </v-card>
     </v-app>
@@ -113,6 +117,10 @@ export default {
 <style>
 .v-toolbar__title {
   color: #ECEFF1;
+}
+
+.pointer {
+  cursor: pointer;
 }
 </style>
 
