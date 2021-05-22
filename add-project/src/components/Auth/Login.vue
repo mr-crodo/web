@@ -6,7 +6,6 @@
           <v-toolbar
               color="blue-grey darken-1"
               dark
-
           >
             <v-toolbar-title>Login form</v-toolbar-title>
           </v-toolbar>
@@ -17,6 +16,7 @@
                 lazy-validation
             >
               <v-text-field
+                  color="blue-grey"
                   label="Email"
                   name="email"
                   prepend-inner-icon="mdi-account"
@@ -26,6 +26,7 @@
               ></v-text-field>
 
               <v-text-field
+                  color="blue-grey"
                   id="password"
                   label="Password"
                   name="password"

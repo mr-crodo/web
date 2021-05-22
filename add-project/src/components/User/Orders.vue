@@ -4,64 +4,73 @@
       <v-flex xs12 sm6 offset-sm3>
         <h1 class="text--secondary mt-5 mb-4">Orders</h1>
         <v-list
+            two-line
             subheader
-            three-line
         >
-
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title>Content filtering</v-list-item-title>
-              <v-list-item-subtitle>Set the content filtering level to restrict appts that can be downloaded</v-list-item-subtitle>
+              <v-list-item-title>Profile photo</v-list-item-title>
+              <v-list-item-subtitle>Change your Google+ profile photo</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>Password</v-list-item-title>
-              <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
         </v-list>
 
         <v-divider></v-divider>
 
         <v-list
-            flat
             subheader
-            three-line
+            two-line
+            flat
         >
-          <v-subheader>General</v-subheader>
 
           <v-list-item-group
-              v-model="settings"
+              avatar
+              v-for="order in orders"
+              :key="order"
               multiple
-              active-class=""
           >
 
-            <v-list-item>
-              <template>
 
-                <div v-slot:default="{ active }">
+            <v-list-content class="d-flex col-12">
+              <v-list-item
+                  class="d-flex col-7"
+                  color="success"
+              >
+                <template  v-slot:default="{ active,}">
+                  <!--                // delete-->
+
+
+
                   <v-list-item-action>
-                    <v-checkbox :input-value="active"></v-checkbox>
+                    <!--                  // value order.done-->
+                    <v-checkbox
+                        :input-value="active"
+                        color="success"
+                    ></v-checkbox>
                   </v-list-item-action>
 
                   <v-list-item-content>
-                    <v-list-item-title>Notifications</v-list-item-title>
-                    <v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
+                    <v-list-item-title>{{ order.name }}</v-list-item-title>
+                    <v-list-item-subtitle>{{ order.phone }}</v-list-item-subtitle>
                   </v-list-item-content>
-                </div>
 
+                </template>
 
-                <v-list-item-action>
-                  <v-btn>
-                    Open
-                  </v-btn>
-                </v-list-item-action>
+              </v-list-item>
 
+              <v-list-item-action class="d-flex col-4 align-items-center justify-center">
+                <v-btn
+                    :to="'/ad/' + order.adId"
+                    color="blue-grey"
+                    dark
+                >
+                  Open
+                </v-btn>
+              </v-list-item-action>
 
-              </template>
-            </v-list-item>
+            </v-list-content>
+
 
 
           </v-list-item-group>

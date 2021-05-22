@@ -5,7 +5,8 @@
       <v-card
           class="mx-auto overflow-hidden"
           width="100%"
-
+          height="100%"
+          color="grey lighten-5"
       >
         <v-system-bar color="blue-grey lighten-5"></v-system-bar>
 
@@ -73,7 +74,7 @@
             </v-navigation-drawer>
 
 
-        <v-container height="100">
+        <v-container>
           <v-content>
             <router-view></router-view>
           </v-content>

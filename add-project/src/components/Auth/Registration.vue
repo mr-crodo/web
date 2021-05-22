@@ -16,6 +16,7 @@
                 lazy-validation
             >
               <v-text-field
+                  color="blue-grey"
                   label="Email"
                   name="email"
                   prepend-inner-icon="mdi-account"
@@ -25,6 +26,7 @@
               ></v-text-field>
 
               <v-text-field
+                  color="blue-grey"
                   id="password"
                   label="Password"
                   name="password"
@@ -37,6 +39,7 @@
                   @click:append="showPassword = !showPassword"
               ></v-text-field>
               <v-text-field
+                  color="blue-grey"
                   id="password"
                   label="Confirm Password"
                   name="confirm-password"
