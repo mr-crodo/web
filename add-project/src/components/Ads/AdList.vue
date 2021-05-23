@@ -7,7 +7,7 @@
         <v-card
             elevation="10"
             class="mb-7"
-            v-for="ad in ads"
+            v-for="ad in myAds"
             :key="ad"
         >
           <v-layout row>
@@ -29,6 +29,7 @@
                 <v-btn
                     :to="'/ad/' + ad.id"
                     color="blue-grey darken-2"
+                    class="mr-4"
                     dark
                 >Open</v-btn>
               </v-card-actions>
@@ -42,24 +43,9 @@
 
 <script>
 export default {
-  data () {
-    return {
-      ads: [
-        {
-          title: 'First ad',
-          description: 'Hello qadan alim',
-          promo: false,
-          imageSrc: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          id: '1234'
-        },
-        {
-          title: 'Second ad',
-          description: 'Hello brother',
-          promo: true,
-          imageSrc: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          id: '123'
-        }
-      ]
+  computed: {
+    myAds () {
+      return this.$store.getters.myAds;
     }
   }
 }

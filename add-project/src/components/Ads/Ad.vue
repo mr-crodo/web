@@ -4,12 +4,12 @@
       <v-flex xs12>
         <v-card>
           <v-img
-              src="https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
+              :src="ad.imageSrc"
               height="300"
           ></v-img>
           <v-card-text>
-            <h1 class="text--secondary">Lorem</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, facere!</p>
+            <h1 class="text--secondary">{{ ad.title }}</h1>
+            <p>{{ ad.description }}</p>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -18,7 +18,12 @@
                 depressed
             >
               Edit</v-btn>
-            <v-btn class="success">Buy</v-btn>
+            <v-btn
+                color="blue-grey darken-1"
+                dark
+                raised
+            >
+              Buy</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -28,9 +33,11 @@
 
 <script>
 export default {
-  data () {
-    return {
-
+  props: ['id'],
+  computed: {
+    ad () {
+      const id = this.id
+      return this.$store.getters.adById(id)
     }
   }
 }
