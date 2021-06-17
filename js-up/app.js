@@ -11,23 +11,23 @@
 // value = Math.floor(Math.random() * arr.length); // ? takom obrazom budet vidavatsa randomno cveta iz massiva
 // console.log(value, arr[value]);
 
-// const firstName = "Nasib";
-// const lastName = "Mammadov";
-// const age = 30;
+const firstName = "Nasib";
+const lastName = "Mammadov";
+const age = 30;
 //
-// let str;
-// str = `
-//         <ul>
-//             <li>First name : ${firstName}</li>
-//             <li>Last name : ${lastName}</li>
-//             <li>Age : ${age}</li>
-//             <li>Full name : ${firstName} ${lastName}</li>
-//             <li>Full name and age : <i>${firstName} ${lastName} ${age}</i></li>
-//         </ul>
-//     `
-//
-//
-// document.querySelector(".app").innerHTML = str;
+let str;
+str = `
+        <ul>
+            <li>First name : ${firstName}</li>
+            <li>Last name : ${lastName}</li>
+            <li>Age : ${age}</li>
+            <li>Full name : ${firstName} ${lastName}</li>
+            <li>Full name and age : <i>${firstName} ${lastName} ${age}</i></li>
+        </ul>
+    `
+
+
+document.querySelector(".hero").innerHTML = str;
 //
 // setInterval(function() {
 //     let message = document.querySelector('#message');
@@ -81,7 +81,7 @@
 //   case 3:
 //     x = "Переменная a равна трем!";
 //     console.log(x);
-    
+
 //     break;
 //   default:
 //     x = "Переменная a не равна 1, 2 или 3!";
@@ -201,3 +201,46 @@ for (i = 1; i < 10; i = i + 1) {
   }
   console.log('i= ' + i);
 }
+
+function printText(a) {
+  document.write(a)
+}
+
+printText("Salam akulaaa")
+
+var printText = (function (a) {
+  document.write(a);
+}("Hello World!"));
+
+function powRun(n) {
+  if (n == 1) {
+    return 1;
+  } else {
+    return powRun(n - 1) + " " + n
+  }
+}
+
+console.log(powRun(8));
+
+// ! toje samoe
+//? return n<= 1? 1 : my_function(n - 1) + ' ' + n;
+
+function my_function(n) {
+  if (n == 1) {
+    return 1;
+  }
+  return my_function(n - 1) + ' ' + n;
+}
+
+function my_function(n) {
+  // Тут нужно написать решение
+  return (n > 1) ? (my_function(n - 1)) + " " + n : 1;
+}
+
+function my_function(n) {
+  // Тут нужно написать решение
+  if (n <= 1) return n;
+  return my_function(n - 1) + " " + n;
+}
+
+console.log(my_function(9));
