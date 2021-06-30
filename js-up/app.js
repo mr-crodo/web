@@ -244,3 +244,45 @@ function my_function(n) {
 }
 
 console.log(my_function(9));
+
+console.log(true && true)
+console.log(true && false)
+console.log(false && false)
+console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+console.log(true || true)
+console.log(true || false)
+console.log(false || false)
+
+if (4) {
+  console.log('ffd');
+} else {
+  console.log('ffdf');
+}
+
+4 ? console.log('Znacenie true') : console.log('dfdfd');
+
+
+let carColor = 'green';
+
+switch (carColor) {
+  case 'green':
+    console.log('Cvat mawini zelenniy');
+    break
+  case 'red':
+    console.log('Cvat mawini krasniy');
+    break
+  case 'yellow':
+    console.log('Cvet mawini jeltiy');
+    break
+  default:
+    console.log('Cvet mawnin ne opredelen');
+}
+
+
+function changeValue(year) {
+  let currentYear = 2018
+  let result = currentYear - year
+  return result
+}
+
+console.log(changeValue(1990));

@@ -16,6 +16,14 @@ const square = function(x) {
 }
 
 // ! samovizivayuwaya functioa
-(function (msg) {
-  console.log(msg);
-})('Hello qaqa');
+// (function (msg) {
+//   console.log(msg);
+// })('Hello qaqa');
+
+
+function foo(x) {
+  console.log(x);
+  console.log(arguments);
+}
+
+foo(11, 'some string', [1,2,3])
